@@ -1,0 +1,3 @@
+# Unexpected Inclusion of android.permission.ACCESS_MEDIA_LOCATION in APKs by expo-media-library
+
+Despite the `isAccessMediaLocationEnabled` property being set to false in the [expo-media-library documentation](https://docs.expo.dev/versions/latest/sdk/media-library/#configurable-properties), the `expo-media-library` still includes `android.permission.ACCESS_MEDIA_LOCATION` in the APKs by default. This permission is only excluded when `ACCESS_MEDIA_LOCATION` is added to the `blockedPermissions` in app.config.js. Notably, setting `isAccessMediaLocationEnabled: false` in the plugin settings has no effect.
